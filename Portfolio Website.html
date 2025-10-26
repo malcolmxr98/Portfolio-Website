@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- WEBSITE -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #001f3f;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1e90ff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to bottom, #001f3f, #000);
+      border-radius: 12px;
+      margin: 40px auto;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #111;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #1e90ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #001f3f;
+      color: #ccc;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Malcolm Rodgers</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I'm a web developer passionate about building clean, responsive, and interactive websites.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Calculator App</h3>
+        <p>A simple calculator built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Toddler Learning App</h3>
+        <p>An educational app that helps toddlers learn shapes and colors interactively.</p>
+      </div>
+      <div class="project-card">
+        <h3>Rock Paper Scissors</h3>
+        <p>A fun JavaScript-based game with animations and score tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add this button where you want it (like under Projects) -->
+<button onclick="openCalculator()">Open Calculator</button>
+
+<!-- Hidden Calculator Modal -->
+<div id="calculatorModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCalculator()">&times;</span>
+    <iframe src="calculator.html" width="300" height="400" style="border:none;"></iframe>
+  </div>
+</div>
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+  }
+
+  .close {
+    color: #fff;
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: #1e90ff;
+  }
+</style>
+
+<script>
+  function openCalculator() {
+    document.getElementById("calculatorModal").style.display = "flex";
+  }
+
+  function closeCalculator() {
+    document.getElementById("calculatorModal").style.display = "none";
+  }
+</script>
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:malcolmxr98@gmail.com" style="color:#1e90ff;">malcolmxr98@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Malcolm Rodgers | Web Developer</p>
+  </footer>
+</body>
+</html>
+
